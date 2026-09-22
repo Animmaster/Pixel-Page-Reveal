@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  color: #c4d600;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 20vw, 25rem);
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+h3 {
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(2rem, 3vw, 4rem);
+  font-weight: 500;
+  line-height: 1.25;
+  width: 20rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.preloader-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #e1e1e1;
+  z-index: 0;
+}
+
+.preloader-grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.grid-tile {
+  background-color: #c4d600;
+  outline: 0.05px solid #c4d600;
+  will-change: transform, opacity;
+}
+
+.progress-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  font-family: "DM Mono", monospace;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #000;
+  will-change: transform;
+}
+
+.progress-marker img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1000px) {
+  nav {
+    padding: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+  }
+
+  .hero {
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
